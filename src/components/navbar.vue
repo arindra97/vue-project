@@ -1,61 +1,82 @@
-<template>    
-    <nav class="bg-white">
-        <div class="max-w-full mx-auto px-4 lg:px-32 py-4 lg:pt-6 lg:pb-4 shadow-md">
-            <div class="flex justify-between sm:justify-center">
-                <div class="flex items-center sm:hidden">
-                    <a href="#">
-                        <img src="../assets/logo-navbar.png" alt="logo caribarang.id" width="150" />
-                    </a>
-                </div>
-
-                <!-- Desktop Layout -->
-                <div class="hidden lg:flex lg:space-x-6">
-                    <a href="#" class="text-[#0274BE] relative hover:text-gray-500 inline-flex items-center px-1 pt-1 text-base font-medium">
-                        Produk 1668.com
-                    </a>
-                    <a href="#" class="text-gray-500 relative hover:text-[#0274BE] inline-flex items-center px-1 pt-1 text-base font-medium">
-                        Produk Lokal Indonesia
-                    </a>
-                </div>
-
-                <div class="hidden lg:flex lg:space-x-4 items-center">
-                    <a href="#" class="inline-flex items-center rounded-3xl text-[#0274BE] text-base font-medium border-2 border-[#0274BE] px-8 py-2">
-                        Sign Up
-                    </a>
-                    <a href="#" class="inline-flex items-center rounded-3xl text-white text-base font-medium bg-[#0274BE] border-2 border-[#0274BE] px-8 py-2">
-                        Sign In
-                    </a>
-                </div>
-
-                <!-- Tablet Layout -->
-                <div class="hidden lg:hidden md:flex md:space-x-2">
-                    <a href="#" class="text-[#0274BE] relative hover:text-gray-500 inline-flex items-center px-1 pt-1 text-base font-medium">
-                        Produk 1668.com
-                    </a>
-                    <a href="#" class="text-gray-500 relative hover:text-[#0274BE] inline-flex items-center px-1 pt-1 text-base font-medium">
-                        Produk Lokal Indonesia
-                    </a>
-                </div>
-                
-                <div class="hidden lg:hidden md:flex md:space-x-4 items-center">
-                    <a href="#" class="inline-flex items-center rounded-3xl text-[#0274BE] text-base font-medium border-2 border-[#0274BE] px-8 py-2">
-                        Sign Up
-                    </a>
-                    <a href="#" class="inline-flex items-center rounded-3xl text-white text-base font-medium bg-[#0274BE] border-2 border-[#0274BE] px-8 py-2">
-                        Sign In
-                    </a>
-                </div>
-
-                <!-- Mobile Layout -->
-                <div class="hidden lg:hidden md:hidden sm:flex sm:space-x-2">
-                    <a href="#" class="text-[#0274BE] relative hover:text-gray-500 inline-flex items-center px-1 pt-1 text-base font-medium">
-                        Produk 1668.com
-                    </a>
-                    <a href="#" class="text-gray-500 relative hover:text-[#0274BE] inline-flex items-center px-1 pt-1 text-base font-medium">
-                        Produk Lokal Indonesia
-                    </a>
-                </div>
+<template>
+    <nav class="
+        mx-w-full
+        px-4
+        py-6
+        md:flex md:justify-between md:items-center
+        bg-white
+        drop-shadow-md">
+      
+        <div class ="flex items-center justify-between">
+            <div class="lg:mx-20">
+            <a href="#" class="hidden lg:flex">
+                <img src="../assets/logo-navbar.png" alt="caribarang.id" width="150">
+            </a>
             </div>
         </div>
+
+        <div class="
+            flex 
+            space-y-0 
+            flex-row 
+            justify-between 
+            items-center 
+            space-x-10 
+            mt-0">
+
+            <div>    
+            </div>
+
+            <ul class="flex flex-row space-x-10">
+                <li class="text-[#3366cc]"><a href="#">Produk 1668.com</a></li>
+                <li class="text-[#3366cc]"><a href="#">Produk Lokal Indonesia</a></li>
+            </ul>
+            
+            <!-- Mobile menu button -->
+            <div @click="toggleNav" class="flex md:hidden">
+            <button
+                type="button"
+                class="
+                text-[#3366cc]
+                hover:text-gray-400
+                focus:outline-none focus:text-gray-400
+                "
+            >
+                <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                <path
+                    fill-rule="evenodd"
+                    d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                ></path>
+                </svg>
+            </button>
+            </div>
+    </div>
+
+      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+
+    <div
+        :class="showMenu ? 'flex' : 'hidden'"
+        class="
+          flex-col
+          mt-4
+          space-y-4
+          md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0
+          lg:mx-20
+        "
+      >
+        <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white text-center font-bold py-2 px-4 rounded">Sign In</a>
+    </div>
+
     </nav>
 </template>
+
+<script>
+import { ref } from 'vue';
+export default {
+  setup() {
+    let showMenu = ref(false);
+    const toggleNav = () => (showMenu.value = !showMenu.value);
+    return { showMenu, toggleNav };
+  },
+};
+</script>
