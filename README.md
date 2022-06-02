@@ -10,17 +10,17 @@ Saya telah membuat redesign dari page detail product caribarang.id, beberapa hal
 ## Preview Project
 Desktop
 <div align="center">
-  <img src="./src/assets/desktop.jpeg" width="100"/>
+  <img src="./src/assets/desktop.jpeg" width="600"/>
 </div>
 
 Tablet
 <div align="center">
-  <img src="./src/assets/tablet.jpeg" width="100"/>
+  <img src="./src/assets/tablet.jpeg" width="400"/>
 </div>
 
 Mobile
 <div align="center">
-  <img src="./src/assets/mobile.jpeg" width="100"/>
+  <img src="./src/assets/mobile.jpeg" width="200"/>
 </div>
 
 ## Project Setup
