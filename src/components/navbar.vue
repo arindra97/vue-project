@@ -1,16 +1,16 @@
 <template>
     <nav class="
         mx-w-full
-        px-4
-        py-6
+        px-2
+        py-4
         md:flex md:justify-between md:items-center
         bg-white
         drop-shadow-md">
       
         <div class ="flex items-center justify-between">
-            <div class="lg:mx-20">
+            <div class="lg:mx-10">
             <a href="#" class="hidden lg:flex">
-                <img src="../assets/logo-navbar.png" alt="caribarang.id" width="150">
+                <img src="../assets/logo-navbar.png" alt="caribarang.id" class="h-8 w-auto">
             </a>
             </div>
         </div>
@@ -27,9 +27,9 @@
             <div>    
             </div>
 
-            <ul class="flex flex-row space-x-10">
-                <li class="text-[#3366cc]"><a href="#">Produk 1668.com</a></li>
-                <li class="text-[#3366cc]"><a href="#">Produk Lokal Indonesia</a></li>
+            <ul class="flex flex-row space-x-6 text-sm sm:text-md sm:font-semibold">
+                <li class="text-[#004B9C] hover:text-gray-500"><a href="#">Produk 1668.com</a></li>
+                <li class="text-gray-500 hover:text-[#004B9C]"><a href="#">Produk Lokal Indonesia</a></li>
             </ul>
             
             <!-- Mobile menu button -->
@@ -37,7 +37,7 @@
             <button
                 type="button"
                 class="
-                text-[#3366cc]
+                text-[#004B9C]
                 hover:text-gray-400
                 focus:outline-none focus:text-gray-400
                 "
@@ -53,7 +53,6 @@
     </div>
 
       <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-
     <div
         :class="showMenu ? 'flex' : 'hidden'"
         class="
@@ -61,7 +60,7 @@
           mt-4
           space-y-4
           md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0
-          lg:mx-20
+          lg:mx-10
         "
       >
         <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white text-center font-bold py-2 px-4 rounded">Sign In</a>
