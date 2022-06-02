@@ -34,48 +34,42 @@
             
             <!-- Mobile menu button -->
             <div @click="toggleNav" class="flex md:hidden">
-            <button
-                type="button"
-                class="
-                text-[#004B9C]
-                hover:text-gray-400
-                focus:outline-none focus:text-gray-400
-                "
-            >
-                <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                <path
-                    fill-rule="evenodd"
-                    d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                ></path>
-                </svg>
-            </button>
+                <button
+                    type="button"
+                    class="
+                    text-[#004B9C]
+                    hover:text-gray-400
+                    focus:outline-none focus:text-gray-400">
+                    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                        <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                    </svg>
+                </button>
             </div>
-    </div>
+        </div>
 
-      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-    <div
-        :class="showMenu ? 'flex' : 'hidden'"
-        class="
-          flex-col
-          mt-4
-          space-y-4
-          md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0
-          lg:mx-10
-        "
-      >
-        <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white text-center font-bold py-2 px-4 rounded">Sign In</a>
-    </div>
-
+        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+        <div
+            :class="showMenu ? 'flex' : 'hidden'"
+            class="
+            flex-col
+            mt-4
+            space-y-4
+            md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0
+            lg:mx-10">
+            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white text-center font-bold py-2 px-4 rounded">
+                Sign In
+            </a>
+        </div>
     </nav>
 </template>
 
 <script>
 import { ref } from 'vue';
 export default {
-  setup() {
-    let showMenu = ref(false);
-    const toggleNav = () => (showMenu.value = !showMenu.value);
-    return { showMenu, toggleNav };
-  },
+    setup() {
+        let showMenu = ref(false);
+        const toggleNav = () => (showMenu.value = !showMenu.value);
+        return { showMenu, toggleNav };
+    },
 };
 </script>

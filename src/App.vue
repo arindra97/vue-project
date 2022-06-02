@@ -1,37 +1,39 @@
 <script setup>
-    import Navbar from './components/Navbar.vue'
+    import Navigasi from './components/Navbar.vue'
+    import Footer from './components/Footer.vue'
     import BreadCumb from './components/BreadCumb.vue'
     import CartIcon from './components/icons/IconCart.vue'
     import LoveIcon from './components/icons/IconLove.vue'
-    const change = src => {
-            document.getElementById('main').src = src;
-        }
+    import TabDetail from './components/TabDetailProduct.vue'
 </script>
 
 <template>
-    <Navbar />
+    <Navigasi />
     <BreadCumb class="mt-8 mb-4"/>
+
+    <!-- Main Content -->
     <div class="mx-w-full 
         mx-10 
         p-4
         overflow-hidden 
         bg-white 
         drop-shadow-sm 
-        grid grid-cols-12 gap-4">
+        flex flex-col space-y-6 md:space-y-0
+        md:grid md:grid-cols-6 md:gap-4">
 
-        <div class="col-span-6
+        <div class="col-span-3 2xl:col-span-2
             flex flex-col">
             
             <img class="max-w-full h-auto" src="./assets/product/img1.jpg" id="main" alt="main image">
             <div class="mt-4 flex flex-row space-x-4">
-                <img class="w-28 h-auto" src="./assets/product/img2.jpg" alt="sub image" @click="change(src)">
-                <img class="w-28 h-auto" src="./assets/product/img3.jpg" alt="sub image" @click="change(src)" >
-                <img class="w-28 h-auto" src="./assets/product/img1.jpg" alt="sub image" @click="change(src)">
-                <img class="w-28 h-auto" src="./assets/product/img2.jpg" alt="sub image" @click="change(src)">
+                <img class="w-28 md:w-20 lg:w-28 xl:w-24 h-auto" src="./assets/product/img2.jpg" alt="sub image">
+                <img class="w-28 md:w-20 lg:w-28 xl:w-24 h-auto" src="./assets/product/img3.jpg" alt="sub image">
+                <img class="w-28 md:w-20 lg:w-28 xl:w-24 h-auto" src="./assets/product/img1.jpg" alt="sub image">
+                <img class="w-28 md:w-20 lg:w-28 xl:w-24 h-auto" src="./assets/product/img2.jpg" alt="sub image">
             </div>
         </div>
 
-        <div class="col-span-6
+        <div class="col-span-3 2xl:col-span-4
             flex flex-col space-y-6">
 
             <h2 class="text-xl">Suitable For Apple Computer Notebook Case Cover Air Computer Case Case Case MacBookPro Case</h2>
@@ -59,22 +61,22 @@
             <div class="space-y-2">
                 <h6 class="text-md font-semibold">Pilih Varian</h6>
                 <ul class="max-w-full flex flex-row flex-wrap items-center">
-                    <li class="flex flex-wrap items-center px-1 cursor-pointer mb-3 mr-3 border-indigo-200 hover:border-2 hover:border-indigo-600 border-2 shadow-sm">
+                    <li class="flex flex-wrap items-center px-1 cursor-pointer mb-3 mr-3 border-sky-200 hover:border-2 hover:border-sky-500 border-2 shadow-sm">
                         <img src="./assets/varian/v1.jpg" alt="varian">
                     </li>
-                    <li class="flex flex-wrap items-center px-1 cursor-pointer mb-3 mr-3 border-indigo-200 hover:border-2 hover:border-indigo-600 border-2 shadow-sm">
+                    <li class="flex flex-wrap items-center px-1 cursor-pointer mb-3 mr-3 border-sky-200 hover:border-2 hover:border-sky-500 border-2 shadow-sm">
                         <img src="./assets/varian/v2.jpg" alt="varian">
                     </li>
-                    <li class="flex flex-wrap items-center px-1 cursor-pointer mb-3 mr-3 border-indigo-200 hover:border-2 hover:border-indigo-600 border-2 shadow-sm">
+                    <li class="flex flex-wrap items-center px-1 cursor-pointer mb-3 mr-3 border-sky-200 hover:border-2 hover:border-sky-500 border-2 shadow-sm">
                         <img src="./assets/varian/v3.jpg" alt="varian">
                     </li>
-                    <li class="flex flex-wrap items-center px-1 cursor-pointer mb-3 mr-3 border-indigo-200 hover:border-2 hover:border-indigo-600 border-2 shadow-sm">
+                    <li class="flex flex-wrap items-center px-1 cursor-pointer mb-3 mr-3 border-sky-200 hover:border-2 hover:border-sky-500 border-2 shadow-sm">
                         <img src="./assets/varian/v4.jpg" alt="varian">
                     </li>
-                    <li class="flex flex-wrap items-center px-1 cursor-pointer mb-3 mr-3 border-indigo-200 hover:border-2 hover:border-indigo-600 border-2 shadow-sm">
+                    <li class="flex flex-wrap items-center px-1 cursor-pointer mb-3 mr-3 border-sky-200 hover:border-2 hover:border-sky-500 border-2 shadow-sm">
                         <img src="./assets/varian/v5.jpg" alt="varian">
                     </li>
-                    <li class="flex flex-wrap items-center px-1 cursor-pointer mb-3 mr-3 border-indigo-200 hover:border-2 hover:border-indigo-600 border-2 shadow-sm">
+                    <li class="flex flex-wrap items-center px-1 cursor-pointer mb-3 mr-3 border-sky-200 hover:border-2 hover:border-sky-500 border-2 shadow-sm">
                         <img src="./assets/varian/v6.jpg" alt="varian">
                     </li>
                 </ul> 
@@ -82,13 +84,13 @@
 
             <div class="space-y-2">
                 <!-- Button Keranjang -->
-                <button class="bg-sky-400 hover:bg-sky-600 w-full text-white font-bold py-2 rounded-md flex flex-row justify-center items-center">
+                <button class="bg-sky-400 hover:bg-sky-600 focus:bg-sky-600 w-full text-white font-bold py-2 rounded-md flex flex-row justify-center items-center">
                     <CartIcon class="h-6 mr-2 fill-neutral-50"/>
                     Tambahkan ke Keranjang
                 </button>
                 
                 <!-- Button Whistlist -->
-                <button class="bg-pink-400 hover:bg-pink-600 w-full text-white font-bold py-2 rounded-md flex flex-row justify-center items-center">
+                <button class="bg-pink-400 hover:bg-pink-600 focus:bg-pink-600 w-full text-white font-bold py-2 rounded-md flex flex-row justify-center items-center">
                     <LoveIcon class="h-6 mr-2 fill-neutral-50"/>
                     Whistlist
                 </button>
@@ -100,8 +102,20 @@
             </a>
         </div>
     </div>
+
+    <!-- Description & Summary Price -->
+    <div class="mx-w-full 
+        mx-10 
+        my-4
+        p-4
+        overflow-hidden 
+        bg-white 
+        drop-shadow-sm 
+        flex flex-col space-y-6">
+    
+        <TabDetail />
+    </div>
+
+    <Footer />
 </template>
 
-<style>
-
-</style>
