@@ -1,14 +1,27 @@
-# vue-project
+# vue+tailwind-project
 
-This template should help get you started developing with Vue 3 in Vite.
+Project redesign detail produk caribarang.id
 
-## Recommended IDE Setup
+Saya telah membuat redesign dari page detail product caribarang.id, beberapa hal yang belum saya selesaikan yaitu
+- Carousel untuk preview Image Product dan Varian Product
+- Responsive table ringkasan harga untuk mobile
+- Count Produk Dummy yang belum sesuai
+  
+## Preview Project
+Desktop
+<div align="center">
+  <img src="./src/assets/desktop.jpeg" width="100"/>
+</div>
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
+Tablet
+<div align="center">
+  <img src="./src/assets/tablet.jpeg" width="100"/>
+</div>
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Mobile
+<div align="center">
+  <img src="./src/assets/mobile.jpeg" width="100"/>
+</div>
 
 ## Project Setup
 
@@ -20,10 +33,4 @@ npm install
 
 ```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
 ```

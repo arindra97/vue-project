@@ -1,5 +1,5 @@
 <script setup>
-    import Navigasi from './components/Navbar.vue'
+    import Navigasi from './components/navbar.vue'
     import Footer from './components/Footer.vue'
     import BreadCumb from './components/BreadCumb.vue'
     import CartIcon from './components/icons/IconCart.vue'
